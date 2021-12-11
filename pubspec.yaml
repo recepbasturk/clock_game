@@ -11,7 +11,10 @@ dependencies:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
+  bloc: ^8.0.1
   cupertino_icons: ^1.0.4
+  equatable: ^2.0.3
+  flutter_bloc: ^8.0.0
   intl: ^0.17.0
   lottie: ^1.2.1
 

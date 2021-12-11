@@ -1,5 +1,10 @@
 {
     "@@locale": "tr",
     "appClockGame": "Saat Oyunu",
+    "gamePageCongratulations": "Tebrikler",
+    "gamePageGameOver": "Oyun Bitti - Tekrar Oyna",
+    "gamePageGameOverRestart": "Yeniden Başlat",
+    "gamePageNext": "Sonraki",
+    "gamePageTryAgain": "Tekrar Dene",
     "homePagePlayButton": "Oyna"
 }

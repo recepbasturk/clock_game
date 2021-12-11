@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
+import 'game/game.dart';
 import 'l10n/l10n.dart';
 
 class HomePage extends StatelessWidget {
@@ -93,18 +94,6 @@ class HomePageButton extends StatelessWidget {
         l10n,
         style: Theme.of(context).textTheme.button,
       ),
-    );
-  }
-}
-
-class GamePage extends StatelessWidget {
-  const GamePage({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    final l10n = context.l10n;
-    return Center(
-      child: Text(l10n.appClockGame),
     );
   }
 }
