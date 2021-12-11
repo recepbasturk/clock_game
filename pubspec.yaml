@@ -1,5 +1,5 @@
 name: clock_game
-description: A new Flutter Clock Game.
+description: A Flutter Clock Game.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
@@ -11,8 +11,9 @@ dependencies:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
-  intl: ^0.17.0
   cupertino_icons: ^1.0.4
+  intl: ^0.17.0
+  lottie: ^1.2.1
 
 dev_dependencies:
   flutter_test:

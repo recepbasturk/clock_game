@@ -1,4 +1,5 @@
 {
     "@@locale": "en",
-    "appClockGame": "Clock Game"
+    "appClockGame": "Clock Game",
+    "homePagePlayButton": "Play"
 }
