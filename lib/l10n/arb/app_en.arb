@@ -1,10 +1,18 @@
 {
     "@@locale": "en",
     "appClockGame": "Clock Game",
+    "appErrorText": "Error",
+    "dialogAreYouSure": "Are you sure?",
+    "dialogCancelButton": "Cancel",
+    "dialogClearButton": "Clear",
+    "dialogClearScoreAttentionText": "Attention!\nScore will be reset!",
     "gamePageCongratulations": "Congratulations",
     "gamePageGameOver": "Game Over - Restart",
     "gamePageGameOverRestart": "Restart",
     "gamePageNext": "Next",
     "gamePageTryAgain": "Try again",
-    "homePagePlayButton": "Play"
+    "homePageHighScoreButton": "High Score",
+    "homePagePlayButton": "Play",
+    "scorePageNoData": "No Data",
+    "scorePageTitle": "High Score"
 }

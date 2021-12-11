@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../l10n/l10n.dart';
+import '../../score/score.dart';
 import '../game.dart';
 
 class AnalogClocksWidget extends StatelessWidget {
@@ -133,6 +134,10 @@ class _AnalogClocksWidgetBuild extends StatelessWidget {
       animation: 'game_over.json',
       buttonText: l10n.gamePageGameOverRestart,
       onPressed: () {
+        final scoreCubit = context.read<ScoreCubit>();
+        scoreCubit.saveScore(
+          score: gameCubit.state.score,
+        );
         gameCubit.gameOver();
         Navigator.pop(context);
       },

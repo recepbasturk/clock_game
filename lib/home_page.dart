@@ -3,6 +3,7 @@ import 'package:lottie/lottie.dart';
 
 import 'game/game.dart';
 import 'l10n/l10n.dart';
+import 'score/score.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -53,6 +54,13 @@ class HomePage extends StatelessWidget {
                         HomePageButton(
                           l10n: l10n.homePagePlayButton,
                           page: const GamePage(),
+                        ),
+                        const SizedBox(
+                          height: 5,
+                        ),
+                        HomePageButton(
+                          l10n: l10n.homePageHighScoreButton,
+                          page: const ScorePage(),
                         ),
                         const SizedBox(
                           height: 5,

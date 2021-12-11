@@ -1,10 +1,18 @@
 {
     "@@locale": "tr",
     "appClockGame": "Saat Oyunu",
+    "appErrorText": "Hata",
+    "dialogAreYouSure": "Emin misin?",
+    "dialogCancelButton": "İptal",
+    "dialogClearButton": "Temizle",
+    "dialogClearScoreAttentionText": "Dikkat!\nPuan sıfırlanacak!",
     "gamePageCongratulations": "Tebrikler",
     "gamePageGameOver": "Oyun Bitti - Tekrar Oyna",
     "gamePageGameOverRestart": "Yeniden Başlat",
     "gamePageNext": "Sonraki",
     "gamePageTryAgain": "Tekrar Dene",
-    "homePagePlayButton": "Oyna"
+    "homePageHighScoreButton": "Yüksek Puan",
+    "homePagePlayButton": "Oyna",
+    "scorePageNoData": "Veri Yok",
+    "scorePageTitle": "En Yüksek Puan"
 }
