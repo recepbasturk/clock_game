@@ -4,6 +4,7 @@ import 'package:lottie/lottie.dart';
 import 'game/game.dart';
 import 'l10n/l10n.dart';
 import 'score/score.dart';
+import 'settings/settings.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -64,6 +65,10 @@ class HomePage extends StatelessWidget {
                         ),
                         const SizedBox(
                           height: 5,
+                        ),
+                        HomePageButton(
+                          l10n: l10n.homePageSettingsButton,
+                          page: const SettingsPage(),
                         ),
                       ],
                     ),

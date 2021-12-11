@@ -13,6 +13,11 @@
     "gamePageTryAgain": "Tekrar Dene",
     "homePageHighScoreButton": "Yüksek Puan",
     "homePagePlayButton": "Oyna",
+    "homePageSettingsButton": "Ayarlar",
     "scorePageNoData": "Veri Yok",
-    "scorePageTitle": "En Yüksek Puan"
+    "scorePageTitle": "En Yüksek Puan",
+    "settingsPageChangeButton": "Değiştir",
+    "settingsPageChooseClock": "Saat Seç",
+    "settingsPageNumberedOrUnnumbered": "Numaralı veya numarısız",
+    "settingsPageTitle": "Ayarlar"
 }

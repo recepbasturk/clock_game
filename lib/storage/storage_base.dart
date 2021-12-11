@@ -6,4 +6,7 @@ abstract class StorageBase {
 
   Future<String> getScoreDateTime();
   Future<void> setScoreDateTime({required String dateTime});
+
+  Future<bool> getSettingsClockImage();
+  Future<void> setSettingsClockImage({required bool isClockImageNumber});
 }

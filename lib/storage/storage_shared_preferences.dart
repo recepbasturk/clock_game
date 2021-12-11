@@ -16,6 +16,7 @@ class StorageSharedPreferences extends StorageBase {
     if (!storage.containsKey('score')) {
       await storage.setInt('score', 0);
       await storage.setString('scoreDateTime', 'noData');
+      await storage.setBool('isClockImageNumber', true);
     }
   }
 
@@ -43,5 +44,18 @@ class StorageSharedPreferences extends StorageBase {
   Future<void> setScoreDateTime({required String dateTime}) async {
     final SharedPreferences storage = await _storage;
     await storage.setString('scoreDateTime', dateTime);
+  }
+
+  @override
+  Future<bool> getSettingsClockImage() async {
+    final SharedPreferences storage = await _storage;
+    final bool result = storage.getBool('isClockImageNumber') ?? true;
+    return result;
+  }
+
+  @override
+  Future<void> setSettingsClockImage({required bool isClockImageNumber}) async {
+    final SharedPreferences storage = await _storage;
+    await storage.setBool('isClockImageNumber', isClockImageNumber);
   }
 }

@@ -2,7 +2,11 @@
 //https://github.com/AkashDivya/infinity_flutter_clock
 
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
 import 'package:vector_math/vector_math_64.dart' show radians;
+
+import '../../settings/settings.dart';
 
 class AnalogClockBuild extends StatelessWidget {
   AnalogClockBuild({
@@ -23,12 +27,13 @@ class AnalogClockBuild extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final settingsCubit = context.read<SettingsCubit>();
     return Stack(
       alignment: Alignment.center,
       children: <Widget>[
-        const Center(
+        Center(
           child: Image(
-            image: AssetImage('assets/images/clock_turtle.png'),
+            image: AssetImage(settingsCubit.clockImage()),
             fit: BoxFit.fitWidth,
           ),
         ),

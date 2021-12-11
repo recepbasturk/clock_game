@@ -13,6 +13,11 @@
     "gamePageTryAgain": "Try again",
     "homePageHighScoreButton": "High Score",
     "homePagePlayButton": "Play",
+    "homePageSettingsButton": "Settings",
     "scorePageNoData": "No Data",
-    "scorePageTitle": "High Score"
+    "scorePageTitle": "High Score",
+    "settingsPageChangeButton": "Change",
+    "settingsPageChooseClock": "Choose Clock",
+    "settingsPageNumberedOrUnnumbered": "Numbered or unnumbered",
+    "settingsPageTitle": "Settings"
 }

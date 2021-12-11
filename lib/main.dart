@@ -6,6 +6,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'home_page.dart';
 import 'l10n/l10n.dart';
 import 'score/score.dart';
+import 'settings/settings.dart';
 import 'storage/storage_shared_preferences.dart';
 
 void main() {
@@ -17,6 +18,12 @@ void main() {
           create: (context) => ScoreCubit(
             context.read<StorageSharedPreferences>(),
           ),
+        ),
+        BlocProvider(
+          create: (context) => SettingsCubit(
+            context.read<StorageSharedPreferences>(),
+          ),
+          lazy: false,
         ),
       ],
       child: const App(),
