@@ -80,6 +80,23 @@ class SettingsPage extends StatelessWidget {
                 onPressed: () {
                   settingsCubit.changeClockImage(
                       isClockImageNumber: isClockImageNumber);
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(
+                      content: Text(
+                        l10n.settingsPageSnackBarSaved,
+                        style: const TextStyle(
+                          fontSize: 30,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      duration: const Duration(milliseconds: 1500),
+                      behavior: SnackBarBehavior.floating,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                      width: 300,
+                    ),
+                  );
                 },
                 child: Text(l10n.settingsPageChangeButton),
               )
