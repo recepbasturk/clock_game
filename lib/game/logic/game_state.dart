@@ -2,14 +2,14 @@ part of 'game_cubit.dart';
 
 class GameState {
   GameState({
-    this.randomNumMap = const {},
+    this.randomNumMap,
     this.selectedHour,
     this.selectedMinute,
     this.health = 3,
     this.score = 0,
   });
 
-  final Map<int, int> randomNumMap;
+  final Map<int, int>? randomNumMap;
   final int? selectedHour;
   final int? selectedMinute;
   final int health;
