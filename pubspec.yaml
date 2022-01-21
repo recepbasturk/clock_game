@@ -11,13 +11,13 @@ dependencies:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
-  bloc: ^8.0.1
+  bloc: ^8.0.2
   cupertino_icons: ^1.0.4
   equatable: ^2.0.3
-  flutter_bloc: ^8.0.0
+  flutter_bloc: ^8.0.1
   intl: ^0.17.0
   lottie: ^1.2.1
-  shared_preferences: ^2.0.11
+  shared_preferences: ^2.0.12
 
 dev_dependencies:
   flutter_test:
