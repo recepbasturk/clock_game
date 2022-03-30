@@ -30,6 +30,13 @@ void main() {
       expect(gameCubit.state.health, 3);
     });
 
+    test('score 10 and health 3 after to answerTrue and nextStage', () {
+      gameCubit.answerTrue();
+      gameCubit.nextStage();
+      expect(gameCubit.state.score, 10);
+      expect(gameCubit.state.health, 3);
+    });
+
     test('score 0 and health 3 after to gameOver', () {
       gameCubit.gameOver();
       expect(gameCubit.state.score, 0);
