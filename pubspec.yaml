@@ -4,20 +4,20 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.15.0 <3.0.0"
+  sdk: ">=2.16.2 <3.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
-  bloc: ^8.0.2
+  bloc: ^8.0.3
   cupertino_icons: ^1.0.4
   equatable: ^2.0.3
   flutter_bloc: ^8.0.1
   intl: ^0.17.0
-  lottie: ^1.2.1
-  shared_preferences: ^2.0.12
+  lottie: ^1.2.2
+  shared_preferences: ^2.0.13
 
 dev_dependencies:
   flutter_test:
