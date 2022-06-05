@@ -9,4 +9,7 @@ abstract class StorageBase {
 
   Future<bool> getSettingsClockImage();
   Future<void> setSettingsClockImage({required bool isClockImageNumber});
+
+  Future<String> getSelectedLanguage();
+  Future<void> setSelectedLanguage({required String language});
 }

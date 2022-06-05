@@ -15,6 +15,7 @@ class SettingsCubit extends Cubit<SettingsState> {
     emit(SettingsState(
       isClockImageNumber: await _storage.getSettingsClockImage(),
       settingsPageChooseImage: await _storage.getSettingsClockImage(),
+      selectedLanguage: await _storage.getSelectedLanguage(),
     ));
   }
 
@@ -36,5 +37,10 @@ class SettingsCubit extends Cubit<SettingsState> {
     } else {
       return 'assets/images/clock_turtle.png';
     }
+  }
+
+  Future<void> changeLanguage(String language) async {
+    emit(state.copyWith(selectedLanguage: language));
+    await _storage.setSelectedLanguage(language: language);
   }
 }

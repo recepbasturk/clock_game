@@ -20,5 +20,7 @@
     "settingsPageChooseClock": "Choose Clock",
     "settingsPageNumberedOrUnnumbered": "Numbered or unnumbered",
     "settingsPageSnackBarSaved": "Saved",
-    "settingsPageTitle": "Settings"
+    "settingsPageTitle": "Settings",
+    "settingsPageEnglish": "English",
+    "settingsPageTurkish": "Turkish"
 }

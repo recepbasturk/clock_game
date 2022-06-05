@@ -58,4 +58,17 @@ class StorageSharedPreferences extends StorageBase {
     final SharedPreferences storage = await _storage;
     await storage.setBool('isClockImageNumber', isClockImageNumber);
   }
+
+  @override
+  Future<String> getSelectedLanguage() async {
+    final SharedPreferences storage = await _storage;
+    final String result = storage.getString('selectedLanguage') ?? 'en';
+    return result;
+  }
+  
+  @override
+  Future<void> setSelectedLanguage({required String language}) async {
+    final SharedPreferences storage = await _storage;
+    await storage.setString('selectedLanguage', language);
+  }
 }

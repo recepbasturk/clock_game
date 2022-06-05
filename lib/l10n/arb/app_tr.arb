@@ -20,5 +20,7 @@
     "settingsPageChooseClock": "Saat Seç",
     "settingsPageNumberedOrUnnumbered": "Numaralı veya numarısız",
     "settingsPageSnackBarSaved": "Kaydedildi",
-    "settingsPageTitle": "Ayarlar"
+    "settingsPageTitle": "Ayarlar",
+    "settingsPageEnglish": "İngilizce",
+    "settingsPageTurkish": "Türkçe"
 }
