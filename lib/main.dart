@@ -35,6 +35,8 @@ class App extends StatelessWidget {
   const App({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    final settingsCubit = context.watch<SettingsCubit>();
+
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.landscapeLeft,
       DeviceOrientation.landscapeRight,
@@ -51,9 +53,12 @@ class App extends StatelessWidget {
           fontWeight: FontWeight.bold,
         )),
       ),
+      locale: Locale(settingsCubit.state.selectedLanguage ?? 'en'),
       localizationsDelegates: const [
         AppLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
       ],
       supportedLocales: AppLocalizations.supportedLocales,
       home: const HomePage(),

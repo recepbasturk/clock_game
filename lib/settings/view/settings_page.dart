@@ -4,8 +4,22 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../l10n/l10n.dart';
 import '../../settings/settings.dart';
 
-class SettingsPage extends StatelessWidget {
+class SettingsPage extends StatefulWidget {
   const SettingsPage({Key? key}) : super(key: key);
+
+  @override
+  State<SettingsPage> createState() => _SettingsPageState();
+}
+
+class _SettingsPageState extends State<SettingsPage> {
+  String? _language;
+
+  @override
+  void initState() {
+    final settingsCubit = context.read<SettingsCubit>();
+    _language = settingsCubit.state.selectedLanguage ?? 'en';
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -35,14 +49,14 @@ class SettingsPage extends StatelessWidget {
               const SizedBox(
                 height: 5,
               ),
-              Text(
-                l10n.settingsPageChooseClock,
-                style: TextStyle(
-                  fontSize: 25,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.green.shade900,
-                ),
-              ),
+              // Text(
+              //   l10n.settingsPageChooseClock,
+              //   style: TextStyle(
+              //     fontSize: 25,
+              //     fontWeight: FontWeight.bold,
+              //     color: Colors.green.shade900,
+              //   ),
+              // ),
               Text(
                 l10n.settingsPageNumberedOrUnnumbered,
                 style: TextStyle(
@@ -51,9 +65,7 @@ class SettingsPage extends StatelessWidget {
                   color: Colors.green.shade900,
                 ),
               ),
-              const SizedBox(
-                height: 5,
-              ),
+
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -73,13 +85,19 @@ class SettingsPage extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(
-                height: 5,
+              Row(
+                children: [
+                  const Expanded(child: SizedBox()),
+                  languageRadioListTile(l10n.settingsPageEnglish, 'en'),
+                  languageRadioListTile(l10n.settingsPageTurkish, 'tr'),
+                  const Expanded(child: SizedBox()),
+                ],
               ),
               ElevatedButton(
                 onPressed: () {
                   settingsCubit.changeClockImage(
                       isClockImageNumber: isClockImageNumber);
+                  settingsCubit.changeLanguage(_language!);
                   ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(
                       content: Text(
@@ -125,6 +143,24 @@ class SettingsPage extends StatelessWidget {
         width: 160,
         child: Image(
           image: AssetImage(image),
+        ),
+      ),
+    );
+  }
+
+  Widget languageRadioListTile(l10n, String lang) {
+    return Expanded(
+      child: SizedBox(
+        height: 40,
+        child: RadioListTile<String>(
+          title: Text(l10n),
+          value: lang,
+          groupValue: _language,
+          onChanged: (value) {
+            setState(() {
+              _language = value;
+            });
+          },
         ),
       ),
     );
