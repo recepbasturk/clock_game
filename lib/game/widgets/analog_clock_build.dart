@@ -1,9 +1,10 @@
 // -This file has been edited according to the source below.
 //https://github.com/AkashDivya/infinity_flutter_clock
 
+// ignore_for_file: depend_on_referenced_packages
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import 'package:vector_math/vector_math_64.dart' show radians;
 
 import '../../settings/settings.dart';
@@ -78,7 +79,7 @@ class AnalogClockBuild extends StatelessWidget {
         angle: angleRadians,
         child: Transform.translate(
           offset: Offset(xOffset, yOffset),
-          child: Container(
+          child: DecoratedBox(
             decoration: BoxDecoration(
               boxShadow: <BoxShadow>[
                 BoxShadow(
@@ -100,7 +101,7 @@ class AnalogClockBuild extends StatelessWidget {
 
   // This widget acts as the Center Pin for the Clock.
   Widget _stud() {
-    return Container(
+    return DecoratedBox(
       decoration: BoxDecoration(
         boxShadow: <BoxShadow>[
           BoxShadow(

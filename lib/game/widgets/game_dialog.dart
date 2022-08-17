@@ -21,7 +21,7 @@ class GameDialog extends StatelessWidget {
       onWillPop: () async => false,
       child: Column(
         children: [
-          Container(
+          DecoratedBox(
             decoration: const BoxDecoration(
               color: Colors.green,
               borderRadius: BorderRadius.all(Radius.circular(5)),

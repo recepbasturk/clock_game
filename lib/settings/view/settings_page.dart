@@ -36,12 +36,13 @@ class _SettingsPageState extends State<SettingsPage> {
         child: Scaffold(
           appBar: AppBar(
             leading: IconButton(
-                icon: const Icon(Icons.arrow_back),
-                onPressed: () {
-                  Navigator.of(context).pop();
-                  settingsCubit
-                      .chooseImage(settingsCubit.state.isClockImageNumber);
-                }),
+              icon: const Icon(Icons.arrow_back),
+              onPressed: () {
+                Navigator.of(context).pop();
+                settingsCubit
+                    .chooseImage(settingsCubit.state.isClockImageNumber);
+              },
+            ),
             title: Text(l10n.settingsPageTitle),
           ),
           body: Column(
@@ -96,7 +97,8 @@ class _SettingsPageState extends State<SettingsPage> {
               ElevatedButton(
                 onPressed: () {
                   settingsCubit.changeClockImage(
-                      isClockImageNumber: isClockImageNumber);
+                    isClockImageNumber: isClockImageNumber,
+                  );
                   settingsCubit.changeLanguage(_language!);
                   ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(

@@ -10,25 +10,27 @@ import 'settings/settings.dart';
 import 'storage/storage_shared_preferences.dart';
 
 void main() {
-  runApp(RepositoryProvider(
-    create: (context) => StorageSharedPreferences(),
-    child: MultiBlocProvider(
-      providers: [
-        BlocProvider(
-          create: (context) => ScoreCubit(
-            context.read<StorageSharedPreferences>(),
+  runApp(
+    RepositoryProvider(
+      create: (context) => StorageSharedPreferences(),
+      child: MultiBlocProvider(
+        providers: [
+          BlocProvider(
+            create: (context) => ScoreCubit(
+              context.read<StorageSharedPreferences>(),
+            ),
           ),
-        ),
-        BlocProvider(
-          create: (context) => SettingsCubit(
-            context.read<StorageSharedPreferences>(),
+          BlocProvider(
+            create: (context) => SettingsCubit(
+              context.read<StorageSharedPreferences>(),
+            ),
+            lazy: false,
           ),
-          lazy: false,
-        ),
-      ],
-      child: const App(),
+        ],
+        child: const App(),
+      ),
     ),
-  ));
+  );
 }
 
 class App extends StatelessWidget {
@@ -47,11 +49,12 @@ class App extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.green,
         textTheme: const TextTheme(
-            button: TextStyle(
-          color: Colors.white,
-          fontSize: 30,
-          fontWeight: FontWeight.bold,
-        )),
+          button: TextStyle(
+            color: Colors.white,
+            fontSize: 30,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
       ),
       locale: Locale(settingsCubit.state.selectedLanguage ?? 'en'),
       localizationsDelegates: const [

@@ -18,12 +18,15 @@ class GameCubit extends Cubit<GameState> {
     final Map<int, int> randomNumMap = _randomNumbers.randomNumbers();
     final int selectedHour = randomNumMap.keys.elementAt(random.nextInt(4));
     final int selectedMinute = randomNumMap[selectedHour]!;
-    emit(GameState(
+    emit(
+      GameState(
         randomNumMap: randomNumMap,
         selectedHour: selectedHour,
         selectedMinute: selectedMinute,
         score: state.score,
-        health: state.health));
+        health: state.health,
+      ),
+    );
   }
 
   void answerTrue() {

@@ -16,7 +16,7 @@ class AnalogClocksWidget extends StatelessWidget {
           return previous.randomNumMap != current.randomNumMap;
         },
         builder: (context, state) {
-          return Container(
+          return ColoredBox(
             color: Colors.white,
             child: Row(
               children: _analogClocksWidget(
@@ -106,24 +106,25 @@ class _AnalogClocksWidgetBuild extends StatelessWidget {
   void answerTrueReturn(gameCubit, l10n, BuildContext context) {
     gameCubit.answerTrue();
     showDialog(
-        barrierDismissible: false,
-        context: context,
-        builder: (context) {
-          return SimpleDialog(
-            contentPadding: const EdgeInsets.all(10),
-            children: <Widget>[
-              GameDialog(
-                title: l10n.gamePageCongratulations,
-                animation: 'answer_true.json',
-                buttonText: l10n.gamePageNext,
-                onPressed: () {
-                  gameCubit.nextStage();
-                  Navigator.pop(context);
-                },
-              ),
-            ],
-          );
-        });
+      barrierDismissible: false,
+      context: context,
+      builder: (context) {
+        return SimpleDialog(
+          contentPadding: const EdgeInsets.all(10),
+          children: <Widget>[
+            GameDialog(
+              title: l10n.gamePageCongratulations,
+              animation: 'answer_true.json',
+              buttonText: l10n.gamePageNext,
+              onPressed: () {
+                gameCubit.nextStage();
+                Navigator.pop(context);
+              },
+            ),
+          ],
+        );
+      },
+    );
   }
 
   bool healthZero(gameCubit) => gameCubit.state.health == 0;

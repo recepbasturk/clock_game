@@ -125,7 +125,7 @@ class ClearButtonWidget extends StatelessWidget {
             return SimpleDialog(
               contentPadding: const EdgeInsets.all(10),
               children: <Widget>[
-                Container(
+                DecoratedBox(
                   decoration: const BoxDecoration(
                     color: Colors.green,
                     borderRadius: BorderRadius.all(Radius.circular(5)),
@@ -161,8 +161,10 @@ class ClearButtonWidget extends StatelessWidget {
                         context.read<ScoreCubit>().clearScore();
                         Navigator.pop(context);
                       },
-                      child: Text(l10n.dialogClearButton,
-                          style: Theme.of(context).textTheme.button),
+                      child: Text(
+                        l10n.dialogClearButton,
+                        style: Theme.of(context).textTheme.button,
+                      ),
                     ),
                   ],
                 ),

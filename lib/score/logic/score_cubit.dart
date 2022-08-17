@@ -15,8 +15,9 @@ class ScoreCubit extends Cubit<ScoreState> {
 
   Future<void> _readDataScore() async {
     final result = Score(
-        score: await _storage.getScore(),
-        dateTime: await _storage.getScoreDateTime());
+      score: await _storage.getScore(),
+      dateTime: await _storage.getScoreDateTime(),
+    );
     emit(ScoreLoaded(result));
   }
 

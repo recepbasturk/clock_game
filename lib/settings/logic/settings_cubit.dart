@@ -12,11 +12,13 @@ class SettingsCubit extends Cubit<SettingsState> {
   final StorageBase _storage;
 
   Future<void> _readData() async {
-    emit(SettingsState(
-      isClockImageNumber: await _storage.getSettingsClockImage(),
-      settingsPageChooseImage: await _storage.getSettingsClockImage(),
-      selectedLanguage: await _storage.getSelectedLanguage(),
-    ));
+    emit(
+      SettingsState(
+        isClockImageNumber: await _storage.getSettingsClockImage(),
+        settingsPageChooseImage: await _storage.getSettingsClockImage(),
+        selectedLanguage: await _storage.getSelectedLanguage(),
+      ),
+    );
   }
 
   void chooseImage(choose) {
@@ -24,11 +26,14 @@ class SettingsCubit extends Cubit<SettingsState> {
   }
 
   Future<void> changeClockImage({required bool isClockImageNumber}) async {
-    emit(state.copyWith(
-      isClockImageNumber: isClockImageNumber,
-    ));
+    emit(
+      state.copyWith(
+        isClockImageNumber: isClockImageNumber,
+      ),
+    );
     await _storage.setSettingsClockImage(
-        isClockImageNumber: isClockImageNumber);
+      isClockImageNumber: isClockImageNumber,
+    );
   }
 
   String clockImage() {
