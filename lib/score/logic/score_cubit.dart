@@ -23,8 +23,8 @@ class ScoreCubit extends Cubit<ScoreState> {
 
   Future<void> saveScore({required int score}) async {
     final dateTimeNow = DateTime.now().toString().substring(0, 16);
-
-    if (score > 0) {
+    final readScore = await _storage.getScore();
+    if (score > readScore) {
       await _dataEmitAndSet(score: score, dateTime: dateTimeNow);
     }
   }
