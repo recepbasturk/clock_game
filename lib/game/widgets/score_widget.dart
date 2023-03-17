@@ -22,7 +22,7 @@ class ScoreWidget extends StatelessWidget {
             ),
             Text(
               state.score.toString(),
-              style: Theme.of(context).textTheme.headline4,
+              style: Theme.of(context).textTheme.headlineMedium,
             ),
           ],
         );

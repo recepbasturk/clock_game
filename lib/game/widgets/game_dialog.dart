@@ -29,7 +29,7 @@ class GameDialog extends StatelessWidget {
             child: Center(
               child: Text(
                 title,
-                style: Theme.of(context).textTheme.button,
+                style: Theme.of(context).textTheme.labelLarge,
               ),
             ),
           ),
@@ -42,7 +42,7 @@ class GameDialog extends StatelessWidget {
             onPressed: onPressed,
             child: Text(
               buttonText,
-              style: Theme.of(context).textTheme.button,
+              style: Theme.of(context).textTheme.labelLarge,
             ),
           ),
           const SizedBox(

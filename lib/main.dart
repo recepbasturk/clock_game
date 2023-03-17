@@ -49,7 +49,7 @@ class App extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.green,
         textTheme: const TextTheme(
-          button: TextStyle(
+          labelLarge: TextStyle(
             color: Colors.white,
             fontSize: 30,
             fontWeight: FontWeight.bold,

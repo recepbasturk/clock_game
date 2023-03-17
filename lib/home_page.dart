@@ -105,7 +105,7 @@ class HomePageButton extends StatelessWidget {
       },
       child: Text(
         l10n,
-        style: Theme.of(context).textTheme.button,
+        style: Theme.of(context).textTheme.labelLarge,
       ),
     );
   }

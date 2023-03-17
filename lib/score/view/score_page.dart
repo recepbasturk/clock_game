@@ -133,14 +133,14 @@ class ClearButtonWidget extends StatelessWidget {
                   child: Center(
                     child: Text(
                       l10n.dialogAreYouSure,
-                      style: Theme.of(context).textTheme.button,
+                      style: Theme.of(context).textTheme.labelLarge,
                     ),
                   ),
                 ),
                 Center(
                   child: Text(
                     l10n.dialogClearScoreAttentionText,
-                    style: Theme.of(context).textTheme.headline4,
+                    style: Theme.of(context).textTheme.headlineMedium,
                   ),
                 ),
                 Row(
@@ -152,18 +152,20 @@ class ClearButtonWidget extends StatelessWidget {
                       },
                       child: Text(
                         l10n.dialogCancelButton,
-                        style: Theme.of(context).textTheme.button,
+                        style: Theme.of(context).textTheme.labelLarge,
                       ),
                     ),
                     ElevatedButton(
-                      style: ElevatedButton.styleFrom(primary: Colors.red),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.red,
+                      ),
                       onPressed: () {
                         context.read<ScoreCubit>().clearScore();
                         Navigator.pop(context);
                       },
                       child: Text(
                         l10n.dialogClearButton,
-                        style: Theme.of(context).textTheme.button,
+                        style: Theme.of(context).textTheme.labelLarge,
                       ),
                     ),
                   ],

@@ -13,7 +13,7 @@ class DigitalClockWidget extends StatelessWidget {
         return previous.randomNumMap != current.randomNumMap;
       },
       builder: (context, state) {
-        final clockStyle = Theme.of(context).textTheme.headline2;
+        final clockStyle = Theme.of(context).textTheme.displayMedium;
         return Center(
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
