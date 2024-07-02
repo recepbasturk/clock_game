@@ -6,7 +6,7 @@ import '../../score/score.dart';
 import '../game.dart';
 
 class AnalogClocksWidget extends StatelessWidget {
-  const AnalogClocksWidget({Key? key}) : super(key: key);
+  const AnalogClocksWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

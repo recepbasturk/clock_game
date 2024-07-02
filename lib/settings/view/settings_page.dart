@@ -5,7 +5,7 @@ import '../../l10n/l10n.dart';
 import '../../settings/settings.dart';
 
 class SettingsPage extends StatefulWidget {
-  const SettingsPage({Key? key}) : super(key: key);
+  const SettingsPage({super.key});
 
   @override
   State<SettingsPage> createState() => _SettingsPageState();
@@ -119,7 +119,7 @@ class _SettingsPageState extends State<SettingsPage> {
                   );
                 },
                 child: Text(l10n.settingsPageChangeButton),
-              )
+              ),
             ],
           ),
         ),

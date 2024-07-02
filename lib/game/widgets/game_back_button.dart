@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 class GameBackButton extends StatelessWidget {
   const GameBackButton({
-    Key? key,
+    super.key,
     this.iconColor,
     this.onTap,
     this.icon,
-  }) : super(key: key);
+  });
 
   final Color? iconColor;
   final Function()? onTap;

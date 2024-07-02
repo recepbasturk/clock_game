@@ -25,7 +25,7 @@ class HealthWidget extends StatelessWidget {
     _greyHealthIcon(),
   ];
 
-  HealthWidget({Key? key}) : super(key: key);
+  HealthWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

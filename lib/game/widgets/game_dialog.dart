@@ -3,12 +3,12 @@ import 'package:lottie/lottie.dart';
 
 class GameDialog extends StatelessWidget {
   const GameDialog({
-    Key? key,
+    super.key,
     required this.title,
     required this.animation,
     required this.buttonText,
     required this.onPressed,
-  }) : super(key: key);
+  });
 
   final String title;
   final String animation;
@@ -17,8 +17,8 @@ class GameDialog extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return WillPopScope(
-      onWillPop: () async => false,
+    return PopScope(
+      canPop: false,
       child: Column(
         children: [
           DecoratedBox(

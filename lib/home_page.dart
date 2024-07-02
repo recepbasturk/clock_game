@@ -7,7 +7,7 @@ import 'score/score.dart';
 import 'settings/settings.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+  const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -85,10 +85,10 @@ class HomePage extends StatelessWidget {
 
 class HomePageButton extends StatelessWidget {
   const HomePageButton({
-    Key? key,
+    super.key,
     required this.l10n,
     required this.page,
-  }) : super(key: key);
+  });
 
   final String l10n;
   final Widget page;

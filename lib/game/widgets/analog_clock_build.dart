@@ -11,10 +11,10 @@ import '../../settings/settings.dart';
 
 class AnalogClockBuild extends StatelessWidget {
   AnalogClockBuild({
-    Key? key,
+    super.key,
     this.hourHand,
     this.minuteHand,
-  }) : super(key: key);
+  });
 
   final int? hourHand;
   final int? minuteHand;

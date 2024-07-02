@@ -4,7 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../game.dart';
 
 class DigitalClockWidget extends StatelessWidget {
-  const DigitalClockWidget({Key? key}) : super(key: key);
+  const DigitalClockWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

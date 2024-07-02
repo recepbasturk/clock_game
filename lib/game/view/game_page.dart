@@ -4,7 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../game.dart';
 
 class GamePage extends StatelessWidget {
-  const GamePage({Key? key}) : super(key: key);
+  const GamePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class GamePage extends StatelessWidget {
 }
 
 class GameView extends StatelessWidget {
-  const GameView({Key? key}) : super(key: key);
+  const GameView({super.key});
   @override
   Widget build(BuildContext context) {
     final gameCubit = context.read<GameCubit>();

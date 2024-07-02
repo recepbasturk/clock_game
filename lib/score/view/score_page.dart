@@ -5,7 +5,7 @@ import '../../l10n/l10n.dart';
 import '../score.dart';
 
 class ScorePage extends StatelessWidget {
-  const ScorePage({Key? key}) : super(key: key);
+  const ScorePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -33,10 +33,10 @@ class ScorePage extends StatelessWidget {
 
 class ScoreLoadWidget extends StatelessWidget {
   const ScoreLoadWidget({
-    Key? key,
+    super.key,
     required this.l10n,
     required this.scoreState,
-  }) : super(key: key);
+  });
 
   final AppLocalizations l10n;
   final Score scoreState;
@@ -108,9 +108,9 @@ class ScoreLoadWidget extends StatelessWidget {
 
 class ClearButtonWidget extends StatelessWidget {
   const ClearButtonWidget({
-    Key? key,
+    super.key,
     required this.l10n,
-  }) : super(key: key);
+  });
 
   final AppLocalizations l10n;
 

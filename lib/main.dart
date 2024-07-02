@@ -34,7 +34,7 @@ void main() {
 }
 
 class App extends StatelessWidget {
-  const App({Key? key}) : super(key: key);
+  const App({super.key});
   @override
   Widget build(BuildContext context) {
     final settingsCubit = context.watch<SettingsCubit>();
@@ -55,6 +55,7 @@ class App extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
         ),
+        useMaterial3: false,
       ),
       locale: Locale(settingsCubit.state.selectedLanguage ?? 'en'),
       localizationsDelegates: const [
