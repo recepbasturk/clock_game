@@ -28,7 +28,7 @@ linter:
     avoid_double_and_int_checks: true
     avoid_field_initializers_in_const_classes: true
     avoid_final_parameters: true
-    avoid_js_rounded_ints: true
+    avoid_multiple_declarations_per_line: true
     avoid_redundant_argument_values: true
     avoid_setters_without_getters: true
     avoid_type_to_string: true
@@ -37,24 +37,28 @@ linter:
     cancel_subscriptions: true
     directives_ordering: true
     eol_at_end_of_file: true
+    invalid_case_patterns: true
     missing_whitespace_between_adjacent_strings: true
     no_adjacent_strings_in_list: true
+    no_literal_bool_comparisons: true
+    no_self_assignments: true
     noop_primitive_operations: true
-    only_throw_errors: true
     parameter_assignments: true
     prefer_final_in_for_each: true
     prefer_final_locals: true
     prefer_if_elements_to_conditional_expressions: true
     prefer_single_quotes: true
-    require_trailing_commas: true
     sized_box_shrink_expand: true
     sort_unnamed_constructors_first: true
     throw_in_finally: true
+    unnecessary_await_in_return: true
+    unnecessary_breaks: true
     unnecessary_null_checks: true
     unnecessary_parenthesis: true
     unnecessary_statements: true
-    unsafe_html: true
+    unreachable_from_main: true
     use_colored_box: true
+    use_enums: true
     use_late_for_private_fields_and_variables: true
     use_named_constants: true
     use_setters_to_change_properties: true

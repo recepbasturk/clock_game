@@ -83,7 +83,7 @@ class AnalogClockBuild extends StatelessWidget {
             decoration: BoxDecoration(
               boxShadow: <BoxShadow>[
                 BoxShadow(
-                  color: Colors.black.withOpacity(0.15),
+                  color: Colors.black.withValues(alpha: 0.15),
                   offset: const Offset(-2, 2),
                   blurRadius: 5,
                 ),
@@ -105,7 +105,7 @@ class AnalogClockBuild extends StatelessWidget {
       decoration: BoxDecoration(
         boxShadow: <BoxShadow>[
           BoxShadow(
-            color: Colors.black.withOpacity(0.25),
+            color: Colors.black.withValues(alpha: 0.25),
             offset: const Offset(-2, 2),
             blurRadius: 3,
           ),
